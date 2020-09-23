@@ -48,7 +48,7 @@ BEGIN
                 ELSE FALSE
                END)                                 AS passes
     UNION ALL
-    SELECT "there are exactly 251534 users" AS test_case,
+    SELECT "there are exactly 251535 users" AS test_case,
         CAST((SELECT COUNT(distinct address) from user_query) AS STRING) as test_value,
            (CASE
                 WHEN ((SELECT COUNT(distinct address) from user_query)) = 251534 THEN TRUE
